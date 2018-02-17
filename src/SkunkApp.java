@@ -1,27 +1,28 @@
 import java.util.Random;
+import java.util.Scanner;
 
 public class SkunkApp {
 
 	public static void main(String[] args) {
 
-		int sum, dice1, dice2, actual = 0;
-		int[] Total = new int[13];
-		int[] ways = { 0, 0, 1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1 };
+		String again = "y"; // To control the loop
 
-		for (int i = 0; i < 10; i++) {
-			sum = 0;
-			dice1 = new Random().nextInt(6) + 1;
-			dice2 = new Random().nextInt(6) + 1;
-			sum = dice1 + dice2;
-			Total[sum]++;
+		// Create a Scanner object to read keyboard input.
+		Scanner keyboard = new Scanner(System.in);
+
+		// Create a Random object to generate random numbers.
+		Random rand = new Random();
+
+		// rolling the dice.
+		while (again.equalsIgnoreCase("y")) {
+			System.out.println("Rolling");
+			int die1 = rand.nextInt(6) + 1;
+			int die2 = rand.nextInt(6) + 1;
+			System.out.println("dice 1");
+			System.out.println(die1);
+			System.out.println("dice 2");
+			System.out.println(die2);
+			again = keyboard.nextLine();
 		}
-
-		for (int i = 0; i < 13; i++)
-			actual += Total[i];
-
-		System.out.printf("%-4s %s %-11s %s%n", "Sum", "Total", "Expected", "Actual");
-		for (int i = 2; i < 13; i++)
-			System.out.printf("%-4d %-5d %-10.5f %2.5f%n", i, Total[i], 100.0 * ways[i] / 36,
-					100 * (double) Total[i] / actual);
 	}
 }
