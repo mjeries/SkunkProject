@@ -8,7 +8,7 @@ public class SkunkApp {
 		int[] Total = new int[13];
 		int[] ways = { 0, 0, 1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1 };
 
-		for (int i = 0; i < 36000; i++) {
+		for (int i = 0; i < 10; i++) {
 			sum = 0;
 			dice1 = new Random().nextInt(6) + 1;
 			dice2 = new Random().nextInt(6) + 1;
