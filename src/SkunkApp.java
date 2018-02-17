@@ -6,7 +6,7 @@ public class SkunkApp {
 
 		String again; // To control the loop
 
-		// Create a Random object to generate random numbers.
+		// Create a Random generator.
 		Random rand = new Random();
 
 		// rolling the dice.
