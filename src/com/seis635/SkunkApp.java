@@ -1,13 +1,12 @@
+package com.seis635;
+
 import java.util.Random;
 
 public class SkunkApp {
-
+    private static Random rand = new Random();
 	public static void main(String[] args) {
 
 		String again; // To control the loop
-
-		// Create a Random generator.
-		Random rand = new Random();
 
 		// rolling the dice.
 		{
@@ -21,4 +20,10 @@ public class SkunkApp {
 
 		}
 	}
+	public int rollDie() {
+	    int die = this.rand.nextInt(6) + 1;
+        return die;
+    }
+
+
 }

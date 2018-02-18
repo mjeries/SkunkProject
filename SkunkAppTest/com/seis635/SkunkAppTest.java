@@ -1,10 +1,7 @@
-package com.seis635;
+package testing;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import com.seis635.SkunkApp;
+import org.junit.*;
 
 public class SkunkAppTest {
 
@@ -26,7 +23,22 @@ public class SkunkAppTest {
 
 	@Test
 	public void test() {
-		// assert(true)
+//		assert(true)
+	}
+	@Test
+	public void rollDieShouldBeBetweenOneAndSix(){
+
+		SkunkApp app = new SkunkApp();
+
+		int dieRoll =  app.rollDie();
+		boolean isBetweenOneAndSix;
+		if(dieRoll > 0 && dieRoll < 7){
+			isBetweenOneAndSix = true;
+		} else {
+			isBetweenOneAndSix = false;
+		}
+
+		Assert.assertTrue(isBetweenOneAndSix);
 	}
 
 }
