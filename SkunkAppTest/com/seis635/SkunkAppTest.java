@@ -1,7 +1,5 @@
 package com.seis635;
 
-import static org.junit.Assert.*;
-
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -28,7 +26,7 @@ public class SkunkAppTest {
 
 	@Test
 	public void test() {
-//		assert(true)
+		// assert(true)
 	}
 
 }
