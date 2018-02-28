@@ -9,7 +9,7 @@ public class SkunkApp {
     private Random rand;
 	public static void main(String[] args) {
 
-        System.out.println("player1");
+        System.out.println("PlayerOne");
         System.out.println("dice 1");
         System.out.println(new SkunkApp().rollDie());
         System.out.println("dice 2");
@@ -18,7 +18,7 @@ public class SkunkApp {
         {
 
 
-    System.out.println("player2");
+    System.out.println("PlayerTwo");
     System.out.println("dice 1");
     System.out.println(new SkunkApp().rollDie());
     System.out.println("dice 2");
