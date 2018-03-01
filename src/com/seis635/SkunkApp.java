@@ -23,11 +23,11 @@ int y = die2.nextInt(sides);
 System.out.println("Round " + rollnumber + " die 2 rolled a " +y);
 boolean roll1 = x > 1;
 boolean roll2 = y > 1;
-
+boolean snakeyes = x + y > 2.1;
 int rollTotal = x+ y;
-System.out.println("is roll 1 > 1 "   + roll1 );
-System.out.println("is roll 2 > 1 "   + roll2);
-System.out.println("the total "   + rollTotal);
+System.out.println("-Is roll 1 > 1 "   + roll1 );
+System.out.println("-Is roll 2 > 1 "   + roll2);
+System.out.println("-Round must total more > 2 or Snake eyes = "   + snakeyes);
+System.out.println("-The dice total for round = "   + rollTotal);
 System.out.println("");
-
 }}}
