@@ -29,10 +29,10 @@ int y = die2.nextInt(sides);
 
 
 
-int p = die1.nextInt(sides);
+int p = die3.nextInt(sides);
 ++p;
 
-int q = die2.nextInt(sides);
+int q = die4.nextInt(sides);
 ++ q;
 
 
@@ -44,6 +44,8 @@ boolean snakeyes = x + y > 2.1;
 boolean snakeyess = p + q > 2.1;
 int rollTotal = x+ y;
 int rollTotal2 = p+ q;
+int overalltotal = rollTotal;
+
 System.out.println("Player 1 Round " + rollnumber + " die 2 rolled a " +y);
 System.out.println("Player 1 Round " + rollnumber + " die 1 rolled a " +x);
 System.out.println("-Is player 1 die 1 > 1 "   + roll1 );
