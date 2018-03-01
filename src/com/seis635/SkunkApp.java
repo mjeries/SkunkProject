@@ -62,4 +62,5 @@ System.out.println("-Is player 2 die 2 > 1 "   + roll4);
 System.out.println("-Player 2 round must total more > 2 or Snake eyes = "   + snakeyess);
 System.out.println("-The dice total for player 2 = "   + rollTotal2);
 System.out.println("");
+//" overall total"
 }}}
