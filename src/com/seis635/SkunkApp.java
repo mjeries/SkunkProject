@@ -26,9 +26,8 @@ boolean roll2 = y > 1;
 
 int rollTotal = x+ y;
 System.out.println("is roll 1 > 1 "   + roll1 );
-System.out.println("");
-System.out.println("is roll > 1 "   + roll2);
-System.out.println("");
+System.out.println("is roll 2 > 1 "   + roll2);
 System.out.println("the total "   + rollTotal);
 System.out.println("");
+
 }}}
