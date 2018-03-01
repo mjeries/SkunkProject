@@ -21,9 +21,14 @@ int y = die2.nextInt(sides);
 ++ y;
 
 System.out.println("Round " + rollnumber + " die 2 rolled a " +y);
+boolean roll1 = x > 1;
+boolean roll2 = y > 1;
 
 int rollTotal = x+ y;
-
+System.out.println("is roll 1 > 1 "   + roll1 );
+System.out.println("");
+System.out.println("is roll > 1 "   + roll2);
+System.out.println("");
 System.out.println("the total "   + rollTotal);
 System.out.println("");
 }}}
