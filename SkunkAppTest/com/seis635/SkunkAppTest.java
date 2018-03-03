@@ -32,6 +32,10 @@ int hrolls = 10;
 	}
 	public void sidenumbers() {
 		int sides = 6;
-	}}
+	}
+	public void rolltotal() {
+		;
+	}
+}
 
 
