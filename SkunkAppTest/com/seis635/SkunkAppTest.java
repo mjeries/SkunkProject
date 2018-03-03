@@ -1,4 +1,4 @@
-package testing;
+package com.seis635;
 
 import com.seis635.SkunkApp;
 import org.junit.*;
@@ -26,19 +26,12 @@ public class SkunkAppTest {
 //		assert(true)
 	}
 	@Test
-	public void rollDieShouldBeBetweenOneAndSix(){
-
-		SkunkApp app = new SkunkApp();
-
-		int dieRoll =  app.rollDie();
-		boolean isBetweenOneAndSix;
-		if(dieRoll > 0 && dieRoll < 7){
-			isBetweenOneAndSix = true;
-		} else {
-			isBetweenOneAndSix = false;
-		}
-
-		Assert.assertTrue(isBetweenOneAndSix);
+	
+	public void numberofrolls() {
+int hrolls = 10; 
 	}
+	public void sidenumbers() {
+		int sides = 6;
+	}}
 
-}
+
