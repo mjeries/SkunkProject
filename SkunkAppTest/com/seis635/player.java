@@ -24,16 +24,6 @@ public class player {
 	@Test
 	public void test() {
 //		assert(true)
-	}
-	@Test
-	
-	public void numberofrolls() {
-int hrolls = 10; 
-	}
-	public void sidenumbers() {
-		int sides = 6;
-	}
-	public void rolltotal() {
-		;
+
 	}
 }

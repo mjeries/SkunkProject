@@ -1,5 +1,5 @@
 package com.seis635;
 
-public class chips {
+public class playerapp {
 
 }
