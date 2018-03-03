@@ -64,4 +64,4 @@ System.out.println("-The dice total for player 2 = "   + rollTotal2);
 System.out.println("");
 //" overall total"
 }}}
-// changing committer name to darius nyaundi from seis-602-fall2017 
+// changing committer name to darius nyaundi from seis-602-fall2017 dasd,m
