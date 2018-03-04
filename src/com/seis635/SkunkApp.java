@@ -65,7 +65,7 @@ public class SkunkApp {
 			System.out.println("-Is player 2 die 2 > 1 "   + roll4);
 			System.out.println("-The dice total for player 2 = "   + rollTotal2);
 			System.out.println("");
-			System.out.println("skunk someone has " + skunk1point);
+			System.out.println("skunk someone has # of people "+ skunk1point);
 			System.out.println("snakeeye per round " + snakeEyesCount);
 			System.out.println("");
 			System.out.println("");}}}}
