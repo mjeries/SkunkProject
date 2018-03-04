@@ -41,12 +41,4 @@ public class diceapp {
           count++;
  
 System.out.println ("You rolled snake eyes " + snakeyes + " out of " + count + " rolls.");
-int snakeEyesCount = 0;
-
-	if (x.getLastRoll() == 2)
-		snakeEyesCount++;
-	if (dice1.getLastRoll() == 2)
-		snakeEyesCount++;
-}
-
-StdOut.println("Actual count: " + snakeEyesCount);}}}}
+}}}}
