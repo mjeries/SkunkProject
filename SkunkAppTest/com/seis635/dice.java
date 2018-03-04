@@ -59,12 +59,11 @@ public class dice {
 		boolean snakeyes = x + y > 2.1;
 		boolean snakeyess = p + q > 2.1;
 		
-		  if (x == 1 && y == 1) 
-		        // check for snake eyes
-	          count++;
-		  if (x.getLastRoll() == 2)
-				snakeEyesCount++;
-			if (dice1.getLastRoll() == 2)
-				snakeEyesCount+
+		int snakeEyesCount = 0;
+
+		if (x + y == 2)
+			snakeEyesCount++;
+		if (p + q == 2)
+			snakeEyesCount++;
 		}}}
 }
