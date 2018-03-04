@@ -2,8 +2,7 @@ package com.seis635;
 
 public class game {
 	{
-		SkunkApp Skunkobject = new SkunkApp();
-		Skunkobject.Skunkobjects();
+		
 		
 		diceapp diceobject = new diceapp();
 		diceobject.dicepp();
