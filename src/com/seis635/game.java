@@ -7,6 +7,10 @@ public class game {
 		
 		diceapp diceobject = new diceapp();
 		diceobject.dicepp();
-}
-
-}
+		
+		round roundobject = new round();
+		roundobject.roundobjects();
+		
+		dieapp dieobj = new dieapp();
+		dieobj.dieobject();
+}}

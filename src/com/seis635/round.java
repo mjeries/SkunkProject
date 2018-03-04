@@ -2,8 +2,8 @@ package com.seis635;
 
 import java.util.Random;
 
-public class diceapp {
-	public void dicepp() {
+public class round {
+	public void roundobjects() {
 	Random die1 = new Random();
 	Random die2 = new Random();
 
@@ -32,12 +32,8 @@ public class diceapp {
 
 	int q = die4.nextInt(sides);
 	++ q;
-int snakeEyesCount = 0;
-
-	if (x + y == 2)
-		snakeEyesCount++;
-	if (p + q == 2)
-		snakeEyesCount++;
-	
-
-System.out.println("snakeeye per round " + snakeEyesCount);}}}}
+	System.out.println("Player 1 Round " + rollnumber + " die 2 rolled a " +y);
+	System.out.println("Player 1 Round " + rollnumber + " die 1 rolled a " +x);
+	System.out.println("Player 2 Round " + rollnumber + " die 1 rolled a " +p);
+	System.out.println("Player 2 Round " + rollnumber + " die 2 rolled a " +q);;
+}}}}

@@ -27,8 +27,4 @@ public class dice {
 	}
 	@Test
 	
-	public void numberofrolls() {
-int hrolls = 10; 
-	
-	}
-}
+}}
