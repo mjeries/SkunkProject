@@ -62,10 +62,9 @@ public class dice {
 		  if (x == 1 && y == 1) 
 		        // check for snake eyes
 	          count++;
-	 
-	int snakeEyesCount = 0;
-
-		if (x + y == 2)
-			snakeEyesCount++;
+		  if (x.getLastRoll() == 2)
+				snakeEyesCount++;
+			if (dice1.getLastRoll() == 2)
+				snakeEyesCount++;
 		}}}
 }
