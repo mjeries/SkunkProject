@@ -65,6 +65,6 @@ public class dice {
 		  if (x.getLastRoll() == 2)
 				snakeEyesCount++;
 			if (dice1.getLastRoll() == 2)
-				snakeEyesCount++;
+				snakeEyesCount+
 		}}}
 }
