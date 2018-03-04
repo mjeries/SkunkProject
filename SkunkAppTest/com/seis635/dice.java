@@ -1,6 +1,9 @@
 package com.seis635;
 
 import com.seis635.SkunkApp;
+
+import java.util.Random;
+
 import org.junit.*;
 
 public class dice {
@@ -24,7 +27,9 @@ public class dice {
 	@Test
 	public void test() {
 //		assert(true)
-	}
-	@Test
-	
+		Random die1 = new Random();
+		Random die2 = new Random();
+
+		Random die3 = new Random();
+		Random die4 = new Random();
 }}
