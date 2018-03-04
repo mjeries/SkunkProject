@@ -32,13 +32,12 @@ public class diceapp {
 
 	int q = die4.nextInt(sides);
 	++ q;
-	int count = 0;
-	boolean snakeyes = x + y > 2.1;
-	boolean snakeyess = p + q > 2.1;
+int snakeEyesCount = 0;
+
+	if (x + y == 2)
+		snakeEyesCount++;
+	if (p + q == 2)
+		snakeEyesCount++;
 	
-	  if (x == 1 && y == 1) 
-	        // check for snake eyes
-          count++;
- 
-System.out.println ("You rolled snake eyes " + snakeyes + " out of " + count + " rolls.");
-}}}}
+
+System.out.println("snakeeye per round " + snakeEyesCount);}}}}
