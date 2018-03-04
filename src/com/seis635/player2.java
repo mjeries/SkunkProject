@@ -3,6 +3,7 @@ package com.seis635;
 import java.util.Random;
 
 public class player2 {
+	public void player2objects() {
 	Random die1 = new Random();
 	Random die2 = new Random();
 
@@ -35,4 +36,4 @@ public class player2 {
 	int rollTotal2 = p+ q;
 	int overalltotal = rollTotal;
 	System.out.println("-The dice total for player 2 = "   + rollTotal2);
-}}}
+}}}}
