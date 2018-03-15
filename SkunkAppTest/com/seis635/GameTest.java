@@ -11,7 +11,7 @@ import org.junit.Test;
 public class GameTest {
 
 	private Player p1;
-
+	  private Player p2;
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
@@ -46,6 +46,11 @@ public class GameTest {
 		assertNotNull(p1);
 		
 	}
+	{
+		String p2Name = "Please enter the maximum score required to win: ";
+		p2 = new Player(p2Name);
+		assertNotNull(p2);
+	}
 
 	@Test
 	public void testPlayOneRound() {
@@ -54,7 +59,8 @@ public class GameTest {
 
 	@Test
 	public void testWhoIsLeading() {
-		p1 = new Player(p1Name);
+		
+		
 		assertNotNull(p1);
 	}
 
