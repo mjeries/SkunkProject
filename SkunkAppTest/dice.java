@@ -1,4 +1,3 @@
-package com.seis635;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -6,7 +5,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class die {
+public class dice {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -25,18 +24,7 @@ public class die {
 	}
 
 	@Test
-	public void test() {
-//		assert(true)
-	}
-	@Test
-	
-	public void numberofrolls() {
-int hrolls = 10; 
-	}
-	public void sidenumbers() {
-		int sides = 6;
-	}
-	public void rolltotal() {
-		;
-	}
+	public void testskunkonereturnsskunk() {
+//		
+		}
 }
