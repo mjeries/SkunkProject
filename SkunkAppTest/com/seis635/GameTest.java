@@ -54,7 +54,10 @@ public class GameTest {
 
 	@Test
 	public void testPlayOneRound() {
-		
+		int firstDiceRoll = 2;
+        int secondDiceRoll = 1;
+        System.out.printf("(GameOver player losses)"
+        assert true; 
 	}
 
 	@Test
@@ -72,9 +75,8 @@ public class GameTest {
 	@Test
 	public void testCheckIfAnyoneHasWon() {
 		
-		 if (p1.getTotalScore() >= scoreToWin && p2.getTotalScore() >= scoreToWin)		 
-		System.out.println("Its a draw! Both players have exceeded the score limit");
-	           assert false;
+		int p1.getTotalScore() 
+	           
 	}
 	@Test
 	public void testMain() {
