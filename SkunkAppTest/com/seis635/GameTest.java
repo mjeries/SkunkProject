@@ -9,7 +9,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class GameTest {
-
+	private int scoreToWin;
 	private Player p1;
 	  private Player p2;
 	@BeforeClass
@@ -71,12 +71,14 @@ public class GameTest {
 
 	@Test
 	public void testCheckIfAnyoneHasWon() {
-		fail("Not yet implemented");
+		
+		 if (p1.getTotalScore() >= scoreToWin && p2.getTotalScore() >= scoreToWin)		 
+		System.out.println("Its a draw! Both players have exceeded the score limit");
+	           assert false;
 	}
-
 	@Test
 	public void testMain() {
 		fail("Not yet implemented");
 	}
-
+	
 }
