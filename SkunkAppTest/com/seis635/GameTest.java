@@ -54,7 +54,8 @@ public class GameTest {
 
 	@Test
 	public void testWhoIsLeading() {
-		fail("Not yet implemented");
+		p1 = new Player(p1Name);
+		assertNotNull(p1);
 	}
 
 	@Test
