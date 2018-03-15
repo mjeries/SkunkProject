@@ -1,13 +1,18 @@
 package com.seis635;
 
 
+	import static org.junit.Assert.*;
 
+	import org.junit.After;
+	import org.junit.AfterClass;
+	import org.junit.Before;
+	import org.junit.BeforeClass;
+	import org.junit.Test;
 
-	import com.seis635.SkunkApp;
-	import org.junit.*;
+	import sun.applet.Main;
 
+	public class SkunkApptesting {
 
-	public class R {
 		@BeforeClass
 		public static void setUpBeforeClass() throws Exception {
 		}
@@ -30,13 +35,9 @@ package com.seis635;
 		}
 		@Test
 		
-		public void numberofrolls() {
-	int hrolls = 10; 
+		void displayGameMenu() {
+			String result = Game.numberOfSides(6); 
+			assertEquals("6", result);
+
 		}
-		public void sidenumbers() {
-			int sides = 6;
-		}
-		public void rolltotal() {
-			;
-		}
-	}
+}
