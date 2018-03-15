@@ -54,9 +54,9 @@ public class GameTest {
 
 	@Test
 	public void testPlayOneRound() {
-		int firstDiceRoll = 2;
+		int firstDiceRoll = 1;
         int secondDiceRoll = 1;
-        System.out.printf("(GameOver player losses)"
+        System.out.printf("(GameOver player losses)");
         assert true; 
 	}
 
