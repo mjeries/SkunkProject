@@ -5,23 +5,20 @@ package com.seis635;
 	import java.util.Random;
 
 	public class Dice {
-		
-		public static String skunk2(int i) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-		
-	    private final static int numberOfSides = 6;
+	
+	
+				public static int numberOfSides = 6;
+					int rollDice() {
 
-	    int rollDice() {
+				        int result;
+				        Random randomNumberGenerator = new Random();
+				        result = randomNumberGenerator.nextInt(numberOfSides) + 1;
+				        return result;
+				}
 
-	        int result;
-	        Random randomNumberGenerator = new Random();
-	        result = randomNumberGenerator.nextInt(numberOfSides) + 1;
-	        return result;
-	    }
+			}
 
 		
 		
-	}
+	
 

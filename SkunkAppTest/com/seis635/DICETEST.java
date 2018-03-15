@@ -35,16 +35,18 @@ public class DICETEST {
 	}
 	@Test
 	
-	public void testdiceroll1returnsunk() {
-String result = Dice.skunk2(1); 
-assertEquals("numberOfSides", result);
+
+
+	public void testdiceroll1returnsunk2() {
+int result = Dice.numberOfSides(6); 
+assertEquals("6", result);
 	}
+	
 
 
+}
+	
 	
 		
 	
-	
-		
-	}
 
