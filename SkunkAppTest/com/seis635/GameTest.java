@@ -41,7 +41,7 @@ public class GameTest {
 	@Test
 	public void testStartNewGame() {
 
-		String p1Name = null;
+		String p1Name = "Please enter player one name: ";
 		p1 = new Player(p1Name);
 		assertNotNull(p1);
 		
