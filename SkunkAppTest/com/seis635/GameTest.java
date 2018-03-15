@@ -49,7 +49,7 @@ public class GameTest {
 	{
 		String p2Name = "Please enter the maximum score required to win: ";
 		p2 = new Player(p2Name);
-		assertNull(p2);
+		assertNotNull(p2);
 	}
 
 	@Test
