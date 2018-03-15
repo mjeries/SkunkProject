@@ -10,6 +10,8 @@ import org.junit.Test;
 
 public class GameTest {
 
+	private Player p1;
+
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
@@ -38,12 +40,16 @@ public class GameTest {
 
 	@Test
 	public void testStartNewGame() {
-		fail("Not yet implemented");
+
+		String p1Name = null;
+		p1 = new Player(p1Name);
+		assertNotNull(p1);
+		
 	}
 
 	@Test
 	public void testPlayOneRound() {
-		fail("Not yet implemented");
+		
 	}
 
 	@Test
