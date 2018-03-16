@@ -70,15 +70,15 @@ public class Game {
         bank -= 4;
         p.setTotalChips(bank);
         p.setTotalScore(result);
-        System.out.printf("(GameOver player losses)" + " -1 to kitty %d chips total",
+        System.out.printf("(GameOver player losses)",
                 p.getName(), firstDiceRoll, secondDiceRoll,
                 result, p.getTotalScore(), p.getTotalChips());
         
      } else if (firstDiceRoll == 1) {
             result = (0);
-            bank -= 1;
-            p.setTotalScore(result);
+           bank -= 1;
             p.setTotalChips(bank);
+            p.setTotalScore(result);
             System.out.printf("%s rolled %d and %d, "
                     + "and scored %d points(Skunk), "
                     + "for a total of %d points,"
@@ -89,7 +89,7 @@ public class Game {
         }
         else if (secondDiceRoll == 1) {
             result = (0);
-            bank -= 1;
+           bank -= 1;
             p.setTotalChips(bank);
             p.setTotalScore(result);
             System.out.printf("%s rolled %d and %d, "
