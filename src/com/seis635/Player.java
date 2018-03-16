@@ -4,6 +4,7 @@ public class Player {
 	 
 	private final String name;
     private int totalScore;
+private int chips;
 
     Player(String name){
         this.name = name;
@@ -12,7 +13,13 @@ public class Player {
     String getName(){
         return name;
     }
-
+int getTotalChips() {
+	return chips;
+}
+void setTotalChips(int chipscore){
+    chips = chipscore;}
+    
+    
     int getTotalScore(){
         return totalScore;
     }

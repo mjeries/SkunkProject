@@ -68,34 +68,36 @@ public class Game {
      if (firstDiceRoll == 1 && secondDiceRoll  == 1) {
         result = (0);
         bank -= 4;
+        p.setTotalChips(bank);
         p.setTotalScore(result);
         System.out.printf("(GameOver player losses)" + " -1 to kitty %d chips total",
                 p.getName(), firstDiceRoll, secondDiceRoll,
-                result, p.getTotalScore(), bank);
+                result, p.getTotalScore(), p.getTotalChips());
         
      } else if (firstDiceRoll == 1) {
             result = (0);
             bank -= 1;
             p.setTotalScore(result);
+            p.setTotalChips(bank);
             System.out.printf("%s rolled %d and %d, "
                     + "and scored %d points(Skunk), "
                     + "for a total of %d points,"
                     +  "  -1 to kitty %d chips total",
                     p.getName(), firstDiceRoll, secondDiceRoll,
-                    result, p.getTotalScore(), bank
-            );
+                    result, p.getTotalScore(), p.getTotalChips());
         
         }
         else if (secondDiceRoll == 1) {
             result = (0);
             bank -= 1;
+            p.setTotalChips(bank);
             p.setTotalScore(result);
             System.out.printf("%s rolled %d and %d, "
                     + "and scored %d points(Skunk), "
                     + "for a total of %d points,"
                     +  "  -1 to kitty %d chips total",
                     p.getName(), firstDiceRoll, secondDiceRoll,
-                    result, p.getTotalScore(), bank);
+                    result, p.getTotalScore(), p.getTotalChips());
         
         
         
@@ -104,12 +106,13 @@ public class Game {
         else {
             result = (firstDiceRoll + secondDiceRoll);
             p.setTotalScore(result);
+            p.setTotalChips(bank);
             System.out.printf("%s rolled %d and %d, "
                     + "and scored %d points, "
-                    + "for a total of %d points"
+                    + "for a total of %d points,"
                     +  " Chips %d total",
                     p.getName(), firstDiceRoll, secondDiceRoll,
-                    result, p.getTotalScore(), bank);
+                    result, p.getTotalScore(), p.getTotalChips());
         }
      {
     
