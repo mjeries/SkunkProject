@@ -62,35 +62,40 @@ public class Game {
 
     void playOneRound(Player p) {
         int result;
-
+        int bank = 50;
         int firstDiceRoll = dice.rollDice();
         int secondDiceRoll = dice.rollDice();
      if (firstDiceRoll == 1 && secondDiceRoll  == 1) {
         result = (0);
+        bank -= 4;
         p.setTotalScore(result);
-        System.out.printf("(GameOver player losses)",
+        System.out.printf("(GameOver player losses)" + " -1 to kitty %d chips total",
                 p.getName(), firstDiceRoll, secondDiceRoll,
-                result, p.getTotalScore());
+                result, p.getTotalScore(), bank);
         
      } else if (firstDiceRoll == 1) {
             result = (0);
+            bank -= 1;
             p.setTotalScore(result);
             System.out.printf("%s rolled %d and %d, "
                     + "and scored %d points(Skunk), "
-                    + "for a total of %d points",
+                    + "for a total of %d points,"
+                    +  "  -1 to kitty %d chips total",
                     p.getName(), firstDiceRoll, secondDiceRoll,
-                    result, p.getTotalScore()
+                    result, p.getTotalScore(), bank
             );
         
         }
         else if (secondDiceRoll == 1) {
             result = (0);
+            bank -= 1;
             p.setTotalScore(result);
             System.out.printf("%s rolled %d and %d, "
                     + "and scored %d points(Skunk), "
-                    + "for a total of %d points",
+                    + "for a total of %d points,"
+                    +  "  -1 to kitty %d chips total",
                     p.getName(), firstDiceRoll, secondDiceRoll,
-                    result, p.getTotalScore());
+                    result, p.getTotalScore(), bank);
         
         
         
@@ -101,15 +106,19 @@ public class Game {
             p.setTotalScore(result);
             System.out.printf("%s rolled %d and %d, "
                     + "and scored %d points, "
-                    + "for a total of %d points",
+                    + "for a total of %d points"
+                    +  " Chips %d total",
                     p.getName(), firstDiceRoll, secondDiceRoll,
-                    result, p.getTotalScore()
-            );
+                    result, p.getTotalScore(), bank);
+        }
+     {
+    
         }
 
         System.out.println();
-    }
-
+        }
+    
+    
     void whoIsLeading() {
         if (p1.getTotalScore() == p2.getTotalScore()) {
             System.out.format("Its currently a draw, "
