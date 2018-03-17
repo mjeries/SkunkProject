@@ -229,12 +229,12 @@ public static void main(String[] args) {
         System.out.println("SkunkApp Dice Game");
 
         Game game = new Game();
-
+        game.displayGameMenu();
+        System.out.println();
         int optionSelected;
 
         while (true) {
-            game.displayGameMenu();
-            System.out.println();
+            
             Scanner sc = new Scanner(System.in);
             optionSelected = sc.nextInt();
 
