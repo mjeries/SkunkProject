@@ -48,11 +48,11 @@ public class Game {
         String p2Name;
 
         Scanner sc = new Scanner(System.in);
-        System.out.print("Please enter player one name: ");
+        System.out.print(" Please enter player one name: ");
         p1Name = sc.nextLine();
-        System.out.print("Please enter player two name: ");
+        System.out.print(" Please enter player two name: ");
         p2Name = sc.nextLine();
-        System.out.print("Please enter the maximum score required to win: ");
+        System.out.print(" Please enter the maximum score required to win: ");
         scoreToWin = sc.nextInt();
 
         p1 = new Player(p1Name);
@@ -149,19 +149,59 @@ public class Game {
         System.out.println("If player rolls 1 thats a skunk and 0 for the round.");
         System.out.println("If player rolls a 1 on both rolls thats a snake eyes and player loses game.");
         System.out.println("For each player, result is incremented after each turn.");
-        System.out.println("First player to reach or exceed the maxScore wins the game");
-
+        System.out.println("First player to reach or exceed the maxScore wins the game.");
+        System.out.println("player is allowed 1 more roll after someone hits 100.");
+        System.out.println("player are given 50 chips.");
+        System.out.println("player lose -1 chips if hit sunk.");
+        System.out.println("player lose -4 chips if hit sneakeye.");
     }
 
     boolean checkIfAnyoneHasWon() {
+    	 int result;
+         int bank = 50;
+         int firstDiceRoll = dice.rollDice();
+         int secondDiceRoll = dice.rollDice();
+         
         if (p1.getTotalScore() >= scoreToWin && p2.getTotalScore() >= scoreToWin) {
             System.out.println("Its a draw! Both players have exceeded the score limit");
             return true;
-        } else if (p1.getTotalScore() >= scoreToWin && p2.getTotalScore() < scoreToWin) {
-            System.out.format("%s won", p1.getName());
-            return true;
+        }
+            else if (p1.getTotalScore() >= scoreToWin && p2.getTotalScore() < scoreToWin) {
+               
+                
+            	System.out.format("%s (((won)))", p1.getName());
+            	
+            	
+               result = (firstDiceRoll + secondDiceRoll);
+                p2.setTotalScore(result);
+                p2.setTotalChips(bank);
+                System.out.printf("%s rolled %d and %d, "
+                        + "and scored %d points, "
+                        + "for a total of %d points,"
+                        +  " Chips %d total  ",
+                        p2.getName(), firstDiceRoll, secondDiceRoll,
+                        result, p2.getTotalScore(), p2.getTotalChips());
+                
+                System.out.format("%s last roll", p2.getName());
+                return true;
+                
+         
+            
+         
         } else if (p1.getTotalScore() < scoreToWin && p2.getTotalScore() >= scoreToWin) {
-            System.out.format("%s won", p2.getName());
+            System.out.format("%s (((won))) ", p2.getName());
+            
+            result = (firstDiceRoll + secondDiceRoll);
+            p1.setTotalScore(result);
+            p1.setTotalChips(bank);
+            System.out.printf("%s rolled %d and %d, "
+                    + "and scored %d points, "
+                    + "for a total of %d points,"
+                    +  " Chips %d total  ",
+                    p1.getName(), firstDiceRoll, secondDiceRoll,
+                    result, p1.getTotalScore(), p1.getTotalChips());
+            
+            System.out.format("%s last roll", p2.getName());
             return true;
         } 
         return false;
