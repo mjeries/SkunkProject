@@ -70,7 +70,7 @@ public class Game {
         bank -= 4;
         p.setTotalChips(bank);
         p.setTotalScore(result);
-        System.out.printf("(GameOver player losses)",
+        System.out.printf("(GameOver player lost)",
                 p.getName(), firstDiceRoll, secondDiceRoll,
                 result, p.getTotalScore(), p.getTotalChips());
         
