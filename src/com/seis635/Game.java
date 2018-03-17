@@ -10,6 +10,7 @@ public class Game {
     private Player p1;
     private Player p2;
     private Dice dice;
+    private Dice2 dice2;
     private int scoreToWin;
 
     void displayGameMenu() {
@@ -58,46 +59,52 @@ public class Game {
         p1 = new Player(p1Name);
         p2 = new Player(p2Name);
         dice = new Dice();
+        dice2 = new Dice2();
     }
 
     void playOneRound(Player p) {
         int result;
-        int bank = 50;
+        int bank;
+        int bank2 =-1;
+        int bank3 =-4;
         int firstDiceRoll = dice.rollDice();
-        int secondDiceRoll = dice.rollDice();
+        int secondDiceRoll = dice2.rollDice2();
      if (firstDiceRoll == 1 && secondDiceRoll  == 1) {
         result = (0);
-        bank -= 4;
-        p.setTotalChips(bank);
+        bank = (0);
+        p1.setTotalChips(bank);
+        p2.setTotalChips(bank);
         p.setTotalScore(result);
         System.out.printf("(GameOver player lost)",
                 p.getName(), firstDiceRoll, secondDiceRoll,
-                result, p.getTotalScore(), p.getTotalChips());
+                result, p.getTotalScore(), p1.getTotalChips(), p2.getTotalChips());
         
      } else if (firstDiceRoll == 1) {
             result = (0);
-           bank -= 1;
-            p.setTotalChips(bank);
+           bank = (0);
+            p1.setTotalChips(bank);
+            p2.setTotalChips(bank);
             p.setTotalScore(result);
             System.out.printf("%s rolled %d and %d, "
                     + "and scored %d points(Skunk), "
                     + "for a total of %d points,"
                     +  "  -1 to kitty %d chips total",
                     p.getName(), firstDiceRoll, secondDiceRoll,
-                    result, p.getTotalScore(), p.getTotalChips());
+                    result, p.getTotalScore(), p1.getTotalChips(), p2.getTotalChips());
         
         }
         else if (secondDiceRoll == 1) {
             result = (0);
-           bank -= 1;
-            p.setTotalChips(bank);
+            bank = (0);
+            p1.setTotalChips(bank);
+            p2.setTotalChips(bank);
             p.setTotalScore(result);
             System.out.printf("%s rolled %d and %d, "
                     + "and scored %d points(Skunk), "
                     + "for a total of %d points,"
                     +  "  -1 to kitty %d chips total",
                     p.getName(), firstDiceRoll, secondDiceRoll,
-                    result, p.getTotalScore(), p.getTotalChips());
+                    result, p.getTotalScore(), p1.getTotalChips(), p2.getTotalChips());
         
         
         
@@ -105,14 +112,17 @@ public class Game {
         }
         else {
             result = (firstDiceRoll + secondDiceRoll);
+            bank = 0;
+            p1.setTotalChips(bank);
+            p2.setTotalChips(bank);
             p.setTotalScore(result);
-            p.setTotalChips(bank);
+           
             System.out.printf("%s rolled %d and %d, "
                     + "and scored %d points, "
                     + "for a total of %d points,"
                     +  " Chips %d total",
                     p.getName(), firstDiceRoll, secondDiceRoll,
-                    result, p.getTotalScore(), p.getTotalChips());
+                    result, p.getTotalScore(), p1.getTotalChips(), p2.getTotalChips());
         }
      {
     
@@ -121,7 +131,9 @@ public class Game {
         System.out.println();
         }
     
-    
+    void chipstotal() {
+    	
+    }
     void whoIsLeading() {
         if (p1.getTotalScore() == p2.getTotalScore()) {
             System.out.format("Its currently a draw, "
@@ -152,7 +164,7 @@ public class Game {
         System.out.println("First player to reach or exceed the maxScore wins the game.");
         System.out.println("player is allowed 1 more roll after someone hits 100.");
         System.out.println("player are given 50 chips.");
-        System.out.println("player lose -1 chips if hit sunk.");
+        System.out.println("player lose -1 chips if hit skunk.");
         System.out.println("player lose -4 chips if hit sneakeye.");
     }
 
@@ -160,10 +172,11 @@ public class Game {
     	 int result;
          int bank = 50;
          int firstDiceRoll = dice.rollDice();
-         int secondDiceRoll = dice.rollDice();
+         int secondDiceRoll = dice2.rollDice2();
          
         if (p1.getTotalScore() >= scoreToWin && p2.getTotalScore() >= scoreToWin) {
             System.out.println("Its a draw! Both players have exceeded the score limit");
+            
             return true;
         }
             else if (p1.getTotalScore() >= scoreToWin && p2.getTotalScore() < scoreToWin) {
@@ -201,7 +214,7 @@ public class Game {
                     p1.getName(), firstDiceRoll, secondDiceRoll,
                     result, p1.getTotalScore(), p1.getTotalChips());
             
-            System.out.format("%s last roll", p2.getName());
+            System.out.format("%s ((LAST ROLL))", p2.getName());
             return true;
         } 
         return false;
