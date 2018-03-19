@@ -78,7 +78,34 @@ public class Game {
         System.out.printf("(GameOver player lost)",
                 p.getName(), firstDiceRoll, secondDiceRoll,
                 result, p.getTotalScore(), p1.getTotalChips(), p2.getTotalChips());
-        
+     } if (firstDiceRoll == 1 && secondDiceRoll == 2) {
+         result = (0);
+        bank = (0);
+         p1.setTotalChips(bank);
+         p2.setTotalChips(bank);
+         p.setTotalScore(result);
+         System.out.printf("%s rolled %d and %d, "
+                 + "and scored %d points(Skunk & deuce), "
+                 + "for a total of %d points,"
+                 +  "  -2 to kitty %d chips total",
+                 p.getName(), firstDiceRoll, secondDiceRoll,
+                 result, p.getTotalScore(), p1.getTotalChips(), p2.getTotalChips());
+     
+     } else if (firstDiceRoll == 2 && secondDiceRoll == 1) {
+         result = (0);
+        bank = (0);
+         p1.setTotalChips(bank);
+         p2.setTotalChips(bank);
+         p.setTotalScore(result);
+         System.out.printf("%s rolled %d and %d, "
+                 + "and scored %d points(Skunk & deuce), "
+                 + "for a total of %d points,"
+                 +  "  -2 to kitty %d chips total",
+                 p.getName(), firstDiceRoll, secondDiceRoll,
+                 result, p.getTotalScore(), p1.getTotalChips(), p2.getTotalChips());
+     
+     
+         
      } else if (firstDiceRoll == 1) {
             result = (0);
            bank = (0);
