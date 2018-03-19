@@ -75,7 +75,7 @@ public class GameTest {
 	@Test
 	public void testCheckIfAnyoneHasWon() {
 		
-		int p1.getTotalScore() 
+		
 	           
 	}
 	@Test
