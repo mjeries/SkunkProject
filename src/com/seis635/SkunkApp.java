@@ -189,6 +189,7 @@ public class SkunkApp {
 	        System.out.println("player is allowed 1 more roll after someone hits 100.");
 	        System.out.println("player are given 50 chips.");
 	        System.out.println("player lose -1 chips if hit skunk.");
+	        System.out.println("player lose -2 chips if hit skunk, deuce.");
 	        System.out.println("player lose -4 chips if hit sneakeye.");
 	    }
 
