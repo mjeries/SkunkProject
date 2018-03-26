@@ -250,47 +250,4 @@ public class Game {
   
 
 
-public static void main(String[] args) {
-		
-		
-        System.out.println("SkunkApp Dice Game");
-
-        Game game = new Game();
-        game.displayGameMenu();
-        System.out.println();
-        int optionSelected;
-
-        while (true) {
-            
-            Scanner sc = new Scanner(System.in);
-            optionSelected = sc.nextInt();
-
-            while (optionSelected > 5 || optionSelected < 0) {
-
-                System.out.print("Option entered invalid, please enter a number from 1 to 5: ");
-                optionSelected = sc.nextInt();
-            }
-
-            if (optionSelected == 5) {
-                System.out.println("Exiting game");
-                break;
-            }
-
-            game.selectGameOption(optionSelected);
-
-            boolean anyoneWin = game.checkIfAnyoneHasWon();
-            if (anyoneWin) {
-                System.out.println();
-                System.out.println("Game ended.");
-                break;
-                
-              
-            }
-        }
-    }
-
-
-
-
 }
-
